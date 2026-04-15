@@ -1,47 +1,99 @@
-import React from 'react'
-import { useState } from 'react'
-import axios from 'axios'
-
+import React, { useState } from "react";
+import axios from "axios";
+import "./App.css";
 
 function App() {
+  const [question, setQuestion] = useState("");
+  const [messages, setMessages] = useState([]);
+  const [department, setDepartment] = useState("CSE");
+  const [semester, setSemester] = useState("");
+  const [batch, setBatch] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const [question,setQuestion]=useState("")
-  const[message,setMessage]=useState([])
+  const send = async () => {
+    if (!question.trim()) return;
 
-  const send = async ()=>{
-    const res = await axios.post("http://localhost:5000/ask",{
-      question,
-      semester: 4,
-      department: "Software Engineering"
-    })
-    setMessage([
-      ...message,{type:'user',text:'question'},{type:'bot',text:res.data.answer}
-    ])
-    setQuestion("")
-  }
+    const userMsg = { type: "user", text: question };
+    setMessages((prev) => [...prev, userMsg]);
+    setLoading(true);
+
+    try {
+     const res = await axios.post("http://localhost:5000/ask", {
+  student_id: 1,
+  question,
+  semester,
+  department,
+});
+
+      const botMsg = { type: "bot", text: res.data.answer };
+      setMessages((prev) => [...prev, botMsg]);
+    } catch (err) {
+      setMessages((prev) => [
+        ...prev,
+        { type: "bot", text: "Server error" },
+      ]);
+    }
+
+    setLoading(false);
+    setQuestion("");
+  };
 
   return (
-    <div>
-    <h2>Smart Academic Advisor</h2>
+    <div className="container">
+      {/* SIDEBAR */}
+      <div className="sidebar">
+        <h2>🎓 Profile</h2>
 
-    <div>
-      {
-        message.map((m,i)=>(
-          <p key={i} >
-            <b>{m.type}:</b>{m.type}
-          </p>
-        ))
-      }
-    </div> 
+        <select
+          value={department}
+          onChange={(e) => setDepartment(e.target.value)}
+        >
+          <option>CSE</option>
+          <option>CIS</option>
+          <option>SWE</option>
+          <option>MCT</option>
+          <option>ITM</option>
+        </select>
 
-    <input 
-    value={question}
-    onChange={e=> setQuestion (e.target.value)}
-    />
-    <button onClick={send} >Send</button>
+        <input
+          placeholder="Semester"
+          value={semester}
+          onChange={(e) => setSemester(e.target.value)}
+        />
 
+        <input
+          placeholder="Batch"
+          value={batch}
+          onChange={(e) => setBatch(e.target.value)}
+        />
+      </div>
+
+      {/* CHAT */}
+      <div className="chat">
+        <div className="header">🎓 Smart Academic Advisor</div>
+
+        <div className="messages">
+          {messages.map((m, i) => (
+            <div key={i} className={`msg ${m.type}`}>
+              {m.text}
+            </div>
+          ))}
+
+          {loading && <div className="loading">AI is thinking...</div>}
+        </div>
+
+        <div className="input-area">
+          <input
+            value={question}
+            placeholder="Ask about courses, GPA, credits..."
+            onChange={(e) => setQuestion(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && send()}
+          />
+          <button onClick={send}>Send</button>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

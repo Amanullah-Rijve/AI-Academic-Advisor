@@ -1,0 +1,16 @@
+Graduation Requirements:
+Students must complete at least 130 credits with CGPA 2.50.
+
+Probation Rules:
+If GPA < 2.00 → probation.
+
+Course Prerequisites:
+SE202 requires SE101
+SE301 requires SE201
+
+Advice:
+Early semester → focus on fundamentals
+Final year → focus on projects
+
+Credit Limit:
+Max 15 credits per semester

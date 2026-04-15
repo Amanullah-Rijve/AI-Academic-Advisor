@@ -1,9 +1,16 @@
 import PyPDF2
 
+# def load_pdf(path):
+#     text=""
+#     reader = PyPDF2.PdfReader(path)
+#     for page in reader:
+#         text +=page.extact_text()
+#     return text    
+
 def load_pdf(path):
-    text=""
-    reader = PyPDF2.PdfReader(path)
-    for page in reader:
-        text +=page.extact_text()
-    return text    
+    try:
+        with open("data/handbook.txt", "r") as f:
+            return f.read()
+    except:
+        return "No data found"
 
