@@ -1,16 +1,347 @@
-Graduation Requirements:
-Students must complete at least 130 credits with CGPA 2.50.
+=== UNIVERSITY INFO ===
+Name: Daffodil International University
+Website: https://daffodilvarsity.edu.bd/
+Founder: Md. Sabur Khan
+Established: January 24, 2002
+Location: Birulia, Savar, Dhaka (Main Campus), Dhanmondi Kolabagan (Polytechnic)
 
-Probation Rules:
-If GPA < 2.00 → probation.
+---
 
-Course Prerequisites:
-SE202 requires SE101
-SE301 requires SE201
+=== DEPARTMENT INFO ===
+Department: Software Engineering (SWE)
+Faculty: Faculty of Science & Information Technology (FSIT)
 
-Advice:
-Early semester → focus on fundamentals
-Final year → focus on projects
+Programs:
+- B.Sc in Software Engineering
+- B.Sc in SWE (Cyber Security)
+- B.Sc in SWE (Data Science)
+- B.Sc in SWE (Robotics)
+- M.Sc in Software Engineering
+- M.Sc in Cyber Security
 
-Credit Limit:
-Max 15 credits per semester
+---
+
+=== M.SC IN SOFTWARE ENGINEERING ===
+Objective:
+- Develop large-scale software systems
+- Focus on design, development, testing, and maintenance
+- Covers both technical and management aspects
+
+Career Opportunities:
+- Software Companies
+- Banks & Insurance
+- Research Labs
+- Government & IT Firms
+- Cyber Security Industry
+
+Specializations:
+- Cyber Security
+- Data Science & Machine Learning
+
+---
+
+=== ADMISSION REQUIREMENTS ===
+
+B.Sc SWE:
+- SSC & HSC GPA ≥ 2.5
+- Science background (Physics, Math, English)
+
+Diploma:
+- SSC + Diploma in Computer Technology (GPA ≥ 2.5)
+
+English Medium:
+- 5 O-level + 2 A-level
+- Minimum 4 B and 3 C grades
+
+---
+
+M.Sc SWE:
+- Bachelor degree in SWE/CSE/IT/EEE or related
+- CGPA ≥ 2.5
+- Must complete prerequisite courses if needed
+
+---
+
+M.Sc Cyber Security:
+- Strong background in Math & Physics
+- CGPA ≥ 2.5
+- May require prerequisite courses
+
+---
+
+=== PROGRAM STRUCTURE ===
+
+M.Sc SWE:
+- Total Credits: 36
+- Project: 6 credits
+- Thesis: 18 credits
+
+Core Courses:
+- SWE575: Requirements & Modeling
+- SWE587: Software Design
+
+Cyber Security Courses:
+- SWE681: Cyber Security
+- SWE682: Cryptography
+- SWE683: Ethical Hacking
+- SWE684: Information Systems Audit
+
+Data Science Courses:
+- SWE685: Data Science
+- SWE686: Research Design
+- SWE687: Machine Learning
+- SWE688: Data Visualization
+
+---
+
+=== ELECTIVE COURSES ===
+- Web Development
+- Data Modeling
+- AI & Software Agents
+- Mobile App Development
+- Data Mining
+- Human Computer Interaction
+
+---
+
+=== PREREQUISITE COURSES ===
+- Programming (C/Java)
+- Data Structures
+- Algorithms
+- Database Systems
+- Operating Systems
+
+---
+
+=== CLUB INFO ===
+Club Name: Software Engineering Club (SEC)
+
+Wings:
+- Programming
+- Cultural
+- Development
+- Research
+- CPC
+- Student Welfare
+
+Leadership:
+- Convener: Md. Rajib Mia
+- President: Abdul Alim (Batch 221)
+- Vice President: Md. Rahi
+- General Secretary: Md. Sayed Ruman
+
+---
+
+=== FACULTY ===
+- Prof. Dr. Md. Fokhray Hossain (Dean)
+- Prof. Dr. Bimal Chandra Das
+- Dr. Imran Mahmud (Head)
+- Prof. Dr. Saifullah Sadi
+- Dr. Rubaiyat Islam
+
+More: https://faculty.daffodilvarsity.edu.bd/teachers/swe
+
+---
+
+=== TUITION FEES (LOCAL) ===
+
+B.Sc SWE:
+- Duration: 4 Years
+- Total Fees: ~950,000 BDT
+
+M.Sc SWE:
+- Duration: 1.5 Years
+- Total Fees: ~152,500 BDT
+
+M.Sc Cyber Security:
+- Total Fees: ~153,500 BDT
+
+---
+
+=== TUITION FEES ===
+
+BSc SWE:
+- Duration: 4 Years
+- Total Tuition Fee: 950000 BDT
+- Per Semester Fee: 118750 BDT (approx)
+
+
+BSc SWE (Cyber Security):
+- Duration: 4 Years
+- Total Tuition Fee: 980000 BDT
+- Per Semester Fee: 122500 BDT (approx)
+
+BSc SWE (Data Science):
+- Duration: 4 Years
+- Total Tuition Fee: 970000 BDT
+- Per Semester Fee: 121250 BDT (approx)
+
+BSc SWE (Robotics):
+- Duration: 4 Years
+- Total Tuition Fee: 970000 BDT
+- Per Semester Fee: 121250 BDT (approx)
+
+MSc Software Engineering:
+- Duration: 1.5 Years
+- Total Tuition Fee: 152500 BDT
+- Per Semester Fee: 50833 BDT (approx)
+
+MSc Cyber Security:
+- Duration: 1.5 Years
+- Total Tuition Fee: 153500 BDT
+- Per Semester Fee: 51166 BDT (approx)
+
+
+
+=== SCHOLARSHIP RULE ===
+- Maintain CGPA ≥ 3.25
+- Eligible for 25%–35% waiver
+
+---
+
+=== LOCATION ===
+- SWE Department: 6th Floor, Knowledge Tower (AB4)
+
+---
+
+=== ALUMNI ===
+- Afjal H. Sarower → Research Associate
+- Md Naim Chowdhury → Web Developer (Germany)
+
+More: https://webbackend.daffodilvarsity.edu.bd/department/swe/alumni
+
+prompt saftey: "You must ONLY answer using the provided context. If not found, say 'I don't know'."
+Keywords: club, sec, software engineering club
+"If context is empty, try to answer generally but say it is not from official data."
+
+=== PROGRAM: BSc SOFTWARE ENGINEERING ===
+
+OBJECTIVE:
+- Produce global software engineering professionals
+- Develop research, innovation, and industry-ready graduates
+- Focus on SDGs, MDGs, entrepreneurship
+
+PEO (Program Educational Objectives):
+PEO-1: Professionalism in global software industry
+PEO-2: Continuous learning and research development
+PEO-3: Social impact through innovation and entrepreneurship
+
+CREDIT SYSTEM:
+- 147 Credits (Spring 2024 onwards)
+- 145 Credits (upto Spring 2023)
+- 139 Credits (older curriculum)
+
+TUITION FEES:
+- Admission Fee: 61,750 BDT
+- Per Semester Fee: 78,000 BDT
+- Total Tuition Fee: 709,500 BDT
+- Total Program Cost: 952,500 BDT
+
+=== BSc SWE MAJOR: CYBER SECURITY ===
+
+ELIGIBILITY:
+- SSC + HSC GPA ≥ 2.5 (Science)
+- Minimum C in Physics, Math, English
+- Diploma holders allowed (Computer Technology)
+
+CREDIT SYSTEM:
+- 145 Credits
+
+TUITION FEES:
+- Admission Fee: 61,750 BDT
+- Per Semester Fee: 80,000 BDT
+- Tuition Fee: 719,900 BDT
+- Total Program Cost: 962,900 BDT
+
+=== BSc SWE MAJOR: DATA SCIENCE ===
+
+ELIGIBILITY:
+- Same as Cyber Security
+
+CREDIT SYSTEM:
+- 147 Credits
+
+TUITION FEES:
+- Admission Fee: 61,750 BDT
+- Per Semester Fee: 80,000 BDT
+- Tuition Fee: 721,900 BDT
+- Total Program Cost: 964,900 BDT
+
+=== BSc SWE MAJOR: ROBOTICS ===
+
+ELIGIBILITY:
+- Same as Data Science
+
+CREDIT SYSTEM:
+- 147 Credits
+
+TUITION FEES:
+- Admission Fee: 61,750 BDT
+- Per Semester Fee: 80,000 BDT
+- Tuition Fee: 721,900 BDT
+- Total Program Cost: 964,900 BDT
+
+=== MSc SOFTWARE ENGINEERING ===
+
+ELIGIBILITY:
+- Bachelor in SWE/CSE/CS/EEE/IT or related
+- CGPA ≥ 2.5
+
+CREDIT SYSTEM:
+- 42 Credits
+
+COURSES:
+- SWE575: Requirements & Modeling (3)
+- SWE587: Software Design (3)
+
+PROJECT:
+- 6 Credits
+
+THESIS:
+- 18 Credits
+
+TUITION FEES:
+- Admission Fee: 28,750 BDT
+- Per Semester Fee: 35,000 BDT
+- Total Program Cost: 152,500 BDT
+
+=== MSc CYBER SECURITY ===
+
+ELIGIBILITY:
+- Bachelor in CS/CSE/IT/EEE/SWE
+- CGPA ≥ 2.5
+- Math + Physics background required
+- Prerequisite courses may apply
+
+CREDIT SYSTEM:
+- 40–60 Credits (based on background)
+
+COURSES:
+- SWE681: Cyber Security
+- SWE682: Cryptography
+- SWE683: Ethical Hacking
+- SWE684: Information Systems Audit
+
+TUITION FEES:
+- Admission Fee: 28,750 BDT
+- Per Semester Fee: 35,000 BDT
+- Total Program Cost: 153,500 BDT (max 220,000 BDT)
+
+=== PROGRAM GOAL ===
+
+- Produce globally competitive software engineers
+- Specialized in Cyber Security, Robotics, Data Science
+- Prepare students for global IT market
+- Focus on industry + research + entrepreneurship
+
+=== PROGRAM LEARNING OUTCOMES ===
+
+- Apply math, science, engineering knowledge
+- Solve complex engineering problems
+- Design scalable software systems
+- Use modern tools and techniques
+- Understand ethics and social responsibility
+- Work in teams and lead projects
+- Communicate effectively
+- Lifelong learning mindset
+

@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/ask", async (req, res) => {
-  const { student_id = 1, question, semester, department } = req.body;
+  const { student_id, question, semester, department } = req.body;
 
   try {
     const aiRes = await axios.post("http://localhost:8000/ask", {
@@ -17,21 +17,15 @@ app.post("/ask", async (req, res) => {
       department
     });
 
-    const answer = aiRes.data.answer;
+    console.log("FASTAPI RESPONSE:", aiRes.data);
 
-    db.query(
-      "INSERT INTO chats (student_id, question, answer) VALUES (?, ?, ?)",
-      [student_id, question, answer],
-      (err) => {
-        if (err) console.error("DB Error:", err);
-      }
-    );
-
-    return res.json({ answer });
+    return res.json({
+      answer: aiRes.data.answer
+    });
 
   } catch (err) {
-    console.error("FULL ERROR:", err.message);
-    return res.status(500).json({ error: err.message });
+    console.error("EXPRESS ERROR:", err.message);
+    res.status(500).json({ error: "Server error" });
   }
 });
 

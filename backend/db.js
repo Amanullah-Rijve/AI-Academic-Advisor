@@ -4,7 +4,7 @@ export const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "smart-advisor"
+   database: "smart-advisor"
 });
 
 db.connect((err) => {

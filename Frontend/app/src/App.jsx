@@ -19,12 +19,10 @@ function App() {
 
     try {
      const res = await axios.post("http://localhost:5000/ask", {
-  student_id: 1,
   question,
   semester,
   department,
 });
-
       const botMsg = { type: "bot", text: res.data.answer };
       setMessages((prev) => [...prev, botMsg]);
     } catch (err) {
