@@ -16,7 +16,7 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 # ---------------------------
 full_context = load_text("data/handbook.txt")
 
-# Better chunking (clean + stable)
+# Clean chunking
 chunks = re.split(r"===+", full_context)
 chunks = [c.strip() for c in chunks if len(c.strip()) > 30]
 
@@ -24,7 +24,6 @@ chunks = [c.strip() for c in chunks if len(c.strip()) > 30]
 # EMBEDDING MODEL
 # ---------------------------
 embedder = SentenceTransformer("all-MiniLM-L6-v2")
-
 embeddings = embedder.encode(chunks, convert_to_numpy=True)
 
 dimension = embeddings.shape[1]
@@ -32,55 +31,50 @@ index = faiss.IndexFlatL2(dimension)
 index.add(embeddings.astype("float32"))
 
 # ---------------------------
-# RETRIEVAL (FIXED)
+# RETRIEVAL
 # ---------------------------
-def get_relevant_context(question, k=5):
+def get_relevant_context(question: str, k: int = 5) -> str:
     q_vec = embedder.encode([question], convert_to_numpy=True)
-
     distances, indices = index.search(q_vec.astype("float32"), k)
-
-    results = [chunks[i] for i in indices[0]]
-
-    # REMOVE junk empty chunks
-    results = [r for r in results if len(r.strip()) > 20]
-
-    return "\n\n".join(results)
+    results = [chunks[i] for i in indices[0] if len(chunks[i].strip()) > 20]
+    return "\n\n---\n\n".join(results)
 
 # ---------------------------
-# MAIN LLM FUNCTION (FIXED)
+# MAIN LLM FUNCTION
 # ---------------------------
-def ask_llm(question, student):
+def ask_llm(question: str, student: dict) -> str:
     context = get_relevant_context(question)
 
-    prompt = f"""
-You are a DIU Academic Advisor AI.
+    system_prompt = """You are an official Academic Advisor AI for Daffodil International University (DIU), Department of Software Engineering.
 
-You MUST follow these rules:
-- Answer ONLY using the CONTEXT below
-- If answer is not found, say: "I don't know from dataset"
-- Do NOT guess
-- Be short, clear, helpful
+Your behavior rules:
+- Answer ONLY using the provided CONTEXT
+- If the answer is not in the context, respond exactly: "This information is not available in my dataset. Please contact the department directly."
+- Never guess, assume, or fabricate information
+- Be concise, structured, and professional
+- Use bullet points when listing multiple items
+- Always respond in the same language the student uses"""
 
-Student Info:
-- Semester: {student['semester']}
+    user_prompt = f"""Student Profile:
 - Department: {student['department']}
+- Semester: {student['semester']}
 
 CONTEXT:
 {context}
 
-QUESTION:
+STUDENT QUESTION:
 {question}
 
-FINAL ANSWER:
-"""
+Provide a clear, accurate answer based strictly on the context above."""
 
     res = client.chat.completions.create(
         model="llama-3.1-8b-instant",
         messages=[
-            {"role": "system", "content": "You are a strict academic advisor AI."},
-            {"role": "user", "content": prompt}
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
         ],
-        temperature=0.2
+        temperature=0.1,  # lower = more focused, less creative
+        max_tokens=512
     )
 
     return res.choices[0].message.content.strip()

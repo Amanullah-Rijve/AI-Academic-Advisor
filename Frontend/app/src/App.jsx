@@ -20,7 +20,7 @@ function App() {
     try {
      const res = await axios.post("http://localhost:5000/ask", {
   question,
-  semester,
+  semester: parseInt(semester) || 1,
   department,
 });
       const botMsg = { type: "bot", text: res.data.answer };

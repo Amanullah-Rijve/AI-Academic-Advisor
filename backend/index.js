@@ -1,14 +1,14 @@
 import express from "express";
 import cors from "cors";
 import axios from "axios";
-import {db} from "./db.js";
+// import {db} from "./db.js";  // MySQL temporarily disabled for showcase
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 app.post("/ask", async (req, res) => {
-  const { student_id, question, semester, department } = req.body;
+  const { question, semester, department } = req.body;
 
   try {
     const aiRes = await axios.post("http://localhost:8000/ask", {
